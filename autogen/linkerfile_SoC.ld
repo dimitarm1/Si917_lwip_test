@@ -31,11 +31,19 @@
  MEMORY
  {
    rom   (rx)  : ORIGIN = 0x8202000, LENGTH = 0x1fe000
-   ram   (rwx) : ORIGIN = 0x400, LENGTH = 0x2fc00
+   /*
+   ram   (rwx) : ORIGIN = 0x400, LENGTH = 0x3fc00
+ */
+   ram   (rwx) : ORIGIN = 0x400, LENGTH = 0x2fc00 
+     
  }
  MEMORY
  {
+
    udma0   (rwx)  : ORIGIN = 0x2fc00, LENGTH = 0x400
+  /*
+   udma0   (rwx)  : ORIGIN = 0x4fc00, LENGTH = 0x400
+    */ 
    udma1   (rwx)  : ORIGIN = 0x24061c00, LENGTH = 0x400
  }
 
@@ -153,8 +161,14 @@ SECTIONS
 		
 		/* _edata is used in startup code */
 		_edata = __data_end__; 
-	} > ram AT> rom
+	} >  ram  AT >   rom 
 		
+	.webpage :
+	{
+		. = ALIGN(4);
+		*(.webpage*)
+	} > rom 
+	
 	
 	.bss (NOLOAD) :
 	{
