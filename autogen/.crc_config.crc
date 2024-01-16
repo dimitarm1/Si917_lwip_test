@@ -1,0 +1,7 @@
+#CRC Codes for initially generated config files -- do not modify!
+FreeRTOSConfig.h=1773960868
+RTE_Device_917.h=-719277934
+lwipopts.h=1146708759
+sl_board_configuration.h=-447436877
+sl_board_control.h=-188041674
+sl_net_default_values.h=1503430588

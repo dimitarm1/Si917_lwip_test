@@ -1,0 +1,59 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: wifi_lwip_tcp_client_soc
+label: wifi_lwip_tcp_client_soc
+description: |
+  Start a Wi-Fi client and transfer data using LWIP stack to TCP Server
+category: Example|Wi-Fi
+filter:
+- name: Project Difficulty
+  value: [Beginner]
+- name: Wireless Technology
+  value: [Wi-Fi]
+package: wifi
+quality: production
+readme:
+- {path: readme.md}
+source:
+- {path: app.c}
+- {path: main.c}
+include:
+- path: ''
+  file_list:
+  - {path: app.h}
+sdk: {id: gecko_sdk, version: 4.4.0}
+toolchain_settings: []
+component:
+- {from: wiseconnect3_sdk, id: wifi_resources}
+- {id: sl_system}
+- {from: wiseconnect3_sdk, id: basic_network_config_manager}
+- {from: wiseconnect3_sdk, id: si917_memory_default_config}
+- {from: wiseconnect3_sdk, id: SIWG917M111MGTBA}
+- {from: wiseconnect3_sdk, id: sllib_m4_power_save}
+- {from: wiseconnect3_sdk, id: brd4338a}
+- {from: wiseconnect3_sdk, id: syscalls}
+- {from: wiseconnect3_sdk, id: wiseconnect3_common}
+- {from: wiseconnect3_sdk, id: network_manager}
+- {id: freertos}
+- {id: lwip_app_http}
+- {id: brd4002a}
+- {from: wiseconnect3_sdk, id: sl_si91x_lwip_stack}
+- {from: wiseconnect3_sdk, id: wifi}
+other_file:
+- {path: resources/readme/setup_soc_ncp.png}
+- {path: resources/readme/lwip_output.png}
+define:
+- {name: SL_SI91X_PRINT_DBG_LOG}
+- {name: SL_SI91X_MCU_WIRELESS_BASED_WAKEUP}
+requires:
+- condition: [si91x_common_flash]
+  name: device_needs_ram_execution
+configuration:
+- {name: SL_BOARD_ENABLE_VCOM, value: '1'}
+ui_hints:
+  highlight:
+  - {path: readme.md, focus: true}
+sdk_extension:
+- {id: wiseconnect3_sdk, version: 3.1.1}
+post_build: {path: ../../SDKs/gecko_sdk_5/extension/wiseconnect/utilities/postbuild_profile/wiseconnect_soc.slpb,
+  profile: wiseconnect_soc}
+

@@ -1,0 +1,16 @@
+# build artifacts
+build/
+output_gbl/
+*.s37
+
+.vscode/
+
+# reference
+# https://community.silabs.com/s/question/0D51M00007yct8TSAQ/exclude-dot-folders-from-source-control?language=en_US
+.trash/
+.uceditor/
+**/GNU\ ARM*/
+prototype/
+devboard/
+.projectlinkstore
+.settings
