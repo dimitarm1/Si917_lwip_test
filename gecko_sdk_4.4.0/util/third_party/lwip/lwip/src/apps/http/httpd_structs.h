@@ -56,6 +56,7 @@ static const char *const g_psHTTPHeaderStrings[] = {
 #define HTTP_CONTENT_TYPE_ENCODING(contenttype, encoding) "Content-Type: "contenttype"\r\nContent-Encoding: "encoding"\r\n\r\n"
 
 #define HTTP_HDR_HTML           HTTP_CONTENT_TYPE("text/html")
+#define HTTP_HDR_HTM            HTTP_CONTENT_TYPE_ENCODING("text/html", "gzip")
 #define HTTP_HDR_SSI            HTTP_CONTENT_TYPE("text/html\r\nExpires: Fri, 10 Apr 2008 14:00:00 GMT\r\nPragma: no-cache")
 #define HTTP_HDR_GIF            HTTP_CONTENT_TYPE("image/gif")
 #define HTTP_HDR_PNG            HTTP_CONTENT_TYPE("image/png")
@@ -82,7 +83,7 @@ static const char *const g_psHTTPHeaderStrings[] = {
  * and subtypes) */
 static const tHTTPHeader g_psHTTPHeaders[] = {
   { "html", HTTP_HDR_HTML},
-  { "htm",  HTTP_HDR_HTML},
+  { "htm",  HTTP_HDR_HTM},
   { "shtml", HTTP_HDR_SSI},
   { "shtm", HTTP_HDR_SSI},
   { "ssi",  HTTP_HDR_SSI},

@@ -10425,57 +10425,57 @@ static const unsigned char data_ota_json[] = {
 	0x2f, 0x6f, 0x74, 0x61, 0x2e, 0x6a, 0x73, 0x6f, 0x6e, 0,
 	0x7b, 0x3c, 0x21, 0x2d, 0x2d, 0x23, 0x6f, 0x74, 0x61, 0x2d, 
 	0x2d, 0x3e, 0x7d, 0xa, };
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_empty_json[] = {{NULL, data_empty_json, data_empty_json + 12, sizeof(data_empty_json) - 12}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_settings_coap_json[] = {{file_empty_json, data_settings_coap_json, data_settings_coap_json + 20, sizeof(data_settings_coap_json) - 20}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_402_html[] = {{file_settings_coap_json, data_402_html, data_402_html + 10, sizeof(data_402_html) - 10}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_settings_login_json[] = {{file_402_html, data_settings_login_json, data_settings_login_json + 21, sizeof(data_settings_login_json) - 21}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_404_html[] = {{file_settings_login_json, data_404_html, data_404_html + 10, sizeof(data_404_html) - 10}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_status_valve_json[] = {{file_404_html, data_status_valve_json, data_status_valve_json + 19, sizeof(data_status_valve_json) - 19}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_cit_d_json[] = {{file_status_valve_json, data_cit_d_json, data_cit_d_json + 12, sizeof(data_cit_d_json) - 12}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_403_html[] = {{file_cit_d_json, data_403_html, data_403_html + 10, sizeof(data_403_html) - 10}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_settings_ap_json[] = {{file_403_html, data_settings_ap_json, data_settings_ap_json + 18, sizeof(data_settings_ap_json) - 18}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_settings_selftest_json[] = {{file_settings_ap_json, data_settings_selftest_json, data_settings_selftest_json + 24, sizeof(data_settings_selftest_json) - 24}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_settings_valve_json[] = {{file_settings_selftest_json, data_settings_valve_json, data_settings_valve_json + 21, sizeof(data_settings_valve_json) - 21}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_settings_actions_json[] = {{file_settings_valve_json, data_settings_actions_json, data_settings_actions_json + 23, sizeof(data_settings_actions_json) - 23}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_shelly_info_json[] = {{file_settings_actions_json, data_shelly_info_json, data_shelly_info_json + 18, sizeof(data_shelly_info_json) - 18}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_debug_log_shtml[] = {{file_shelly_info_json, data_debug_log_shtml, data_debug_log_shtml + 17, sizeof(data_debug_log_shtml) - 17}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_400_html[] = {{file_debug_log_shtml, data_400_html, data_400_html + 10, sizeof(data_400_html) - 10}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_settings_cloud_json[] = {{file_400_html, data_settings_cloud_json, data_settings_cloud_json + 21, sizeof(data_settings_cloud_json) - 21}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_settings_json[] = {{file_settings_cloud_json, data_settings_json, data_settings_json + 15, sizeof(data_settings_json) - 15}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_index_htm[] = {{file_settings_json, data_index_htm, data_index_htm + 11, sizeof(data_index_htm) - 11}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_503_html[] = {{file_index_htm, data_503_html, data_503_html + 10, sizeof(data_503_html) - 10}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_status_json[] = {{file_503_html, data_status_json, data_status_json + 13, sizeof(data_status_json) - 13}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_stats_json[] = {{file_status_json, data_stats_json, data_stats_json + 12, sizeof(data_stats_json) - 12}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_401_html[] = {{file_stats_json, data_401_html, data_401_html + 10, sizeof(data_401_html) - 10}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_pin_json[] = {{file_401_html, data_pin_json, data_pin_json + 10, sizeof(data_pin_json) - 10}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_favicon_ico[] = {{file_pin_json, data_favicon_ico, data_favicon_ico + 13, sizeof(data_favicon_ico) - 13}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_settings_sta_json[] = {{file_favicon_ico, data_settings_sta_json, data_settings_sta_json + 19, sizeof(data_settings_sta_json) - 19}};
-__attribute__((section(".webpage"))) 
+
 const struct fsdata_file file_ota_json[] = {{file_settings_sta_json, data_ota_json, data_ota_json + 10, sizeof(data_ota_json) - 10}};
 
 #define FS_ROOT file_ota_json

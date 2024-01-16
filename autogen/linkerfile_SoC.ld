@@ -73,7 +73,7 @@ SECTIONS
 		*(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
 		*(SORT(.dtors.*))
 		*(.dtors)
-		
+		*(.webpage*)
 		KEEP(*(.eh_fram e*))			
 	} > rom 
 		
@@ -166,7 +166,7 @@ SECTIONS
 	.webpage :
 	{
 		. = ALIGN(4);
-		*(.webpage*)
+		*(._webpage*)
 	} > rom 
 	
 	
